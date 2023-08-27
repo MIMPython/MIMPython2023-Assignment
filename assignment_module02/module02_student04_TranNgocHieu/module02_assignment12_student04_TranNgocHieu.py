@@ -52,3 +52,20 @@ He said "I'm hungry"
 
 Nguồn: https://www.reddit.com/r/learnpython/comments/5w55jz/should_i_use_or_in_python/?rdt=60725
 """
+
+"""
+Bổ sung:
+Về nguyên bản bài tập, hai string cùng có bề ngoài là 'Đà Nẵng' nhưng lại khác nhau.
+----------------------
+# ă --- u0103
+# ~ --- u0303
+# ẵ --- u1eb5
+
+print(u"\u0103" + u"\u0303")    # ẵ
+print(u"\u1eb5")    # ẵ
+
+print(len("ẵ"))    # 2
+print(len("ẵ"))    # 1
+----------------------
+Ký tự 'ẵ' trong biến thứ nhất là ghép của hai ký tự 'ă' và '~', trong khi ký tự sau là 'ẵ' luôn.
+"""
