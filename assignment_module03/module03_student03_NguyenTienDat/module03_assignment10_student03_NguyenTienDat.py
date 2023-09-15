@@ -1,5 +1,5 @@
 # Bài tập 10:
- 
+
 """
 a) Vòng lặp do-while ở C++ cho phép câu lệnh chạy trước rồi mới kiểm tra điều kiện ở while,
 trong khi ở Python thì không có cấu trúc vòng lặp đó. Python chỉ có loop while, kiểm tra

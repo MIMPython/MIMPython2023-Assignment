@@ -1,5 +1,5 @@
 # Bài tập 5:
-# rock-paper-scissors game.
+# rock-paper-scissors game
 
 def main():
     # "R" = Rock

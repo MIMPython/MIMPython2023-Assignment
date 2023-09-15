@@ -4,4 +4,4 @@
 def count_digits(n):
     number = int(str(2**n) + str(5**n))
     count = len(number)
-    print (count) 
+    print (count)

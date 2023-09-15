@@ -20,6 +20,6 @@ def main(input):
     print (result)
         
 
-# bộ data sets mẫu (10 tên).
+# bộ data sets mẫu (10 tên)
 input = ["JAMES", "MARY", "JOHN", "PATRICIA", "ROBERT", "JENNIFER", "MICHAEL", "LINDA", "WILLIAM", "ELIZABETH"]
 main(input)        
