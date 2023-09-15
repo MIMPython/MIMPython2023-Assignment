@@ -32,13 +32,13 @@ def P(n):
     print("Xác suất P là: ",count/total)
 
 if __name__ == '__main__':
-    a = int(input("Nhập số a: "))
-    b = int(input("Nhập số b: "))
-    print(f"UCLN của {a} và {b} là: ",GCD(3, 3))  # 3
-    print("UCLN của 16 và 4 là: ",GCD(16, 4))  # 4
-    n = int(input("Nhập số N: "))
-    P(1000)#0.608990990990991
+    # a = int(input("Nhập số a: "))
+    # b = int(input("Nhập số b: "))
+    # print(f"UCLN của {a} và {b} là: ",GCD(3, 3))  # 3
+    # print("UCLN của 16 và 4 là: ",GCD(16, 4))  # 4
 
+    P(1000)#0.608990990990991
+    P(100)
 
 #Chạy code: python module03_assignment06_student08_DoMinhQuang.py
 

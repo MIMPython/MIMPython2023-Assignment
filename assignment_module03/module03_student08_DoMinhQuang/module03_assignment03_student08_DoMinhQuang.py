@@ -5,7 +5,7 @@
 
 import sys
 
-filename = sys.argv[1]
+filename = "additionalFolder/module03_assignment03_student08_DoMinhQuang_data.txt"
 f = open(filename, 'r')
 names = f.read().split(",")
 f.close()
