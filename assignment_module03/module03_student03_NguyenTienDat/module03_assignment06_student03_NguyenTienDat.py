@@ -18,7 +18,7 @@ def probability(N):
         
         
         
-# check xem có bao nhiêu cặp số nguyên tố cùng nhau có số n là 1 phần tử trong cặp số đó và phần tử còn lại bé hơn n
+# check xem có bao nhiêu cặp số nguyên tố cùng nhau có số n là 1 phần tử trong cặp số đó và phần tử còn lại bé hơn n.
 def count_coprime_integers(n):
     count = 0
     for i in range(1, n):

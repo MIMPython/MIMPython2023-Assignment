@@ -1,4 +1,4 @@
-# Bài tập 9:
+# Bài tập 9: 
 
 """
 Trong meme trên cho ta thấy được mặt ưu điểm của cấu trúc 'while' so với 'do while',

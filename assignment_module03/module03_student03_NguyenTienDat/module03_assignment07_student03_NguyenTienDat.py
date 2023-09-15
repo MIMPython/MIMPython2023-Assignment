@@ -9,5 +9,5 @@ def largest_prime_factor(n):
             factor += 1
     return n
 
-result = largest_prime_factor(600851475143) # output 6857
+result = largest_prime_factor(600851475143) # output 6857 
 print(result)
