@@ -19,8 +19,7 @@ def fibonacci_1(n):
 def fibonacci_2(n):
     if n > 1:
         return fibonacci_2(n-1) + fibonacci_2(n-2)
-    elif n <= 0: return 0
-    else: return 1
+    else: return n
          
          
 # Sử dụng numpy:import       
