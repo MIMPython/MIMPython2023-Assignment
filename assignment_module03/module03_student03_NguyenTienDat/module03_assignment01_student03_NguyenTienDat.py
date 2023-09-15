@@ -1,4 +1,5 @@
 # Bài tập 1:
 
-while true:
-    print("infinite")
+index = 1
+while index < 0:
+    index += 1

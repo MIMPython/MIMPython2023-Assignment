@@ -6,19 +6,17 @@ def main(input):
     list_input = []
     
     # tạo list 'list_input' chứa 100 số đầu tiên có 50 chữ số từ input 
-    for index in range(0, 100):
+    index = 0
+    while index < 100:
         temp = int(data[index].strip())
-        list_input.append(temp)
+        list_input.insert(index, temp)
+        index += 1
         
     # tính tổng của 100 số từ 'list_input'    
-    
-    # sum = 0
-    # for i in list_input:
-    #     sum += list_input
-    # result = str(sum)
-    # print (result[:10])
-    
-    result = str(sum(list_input))
+    sum = 0
+    for i in range(len(list_input)):
+        sum += list_input[i]
+    result = str(sum)
     print (result[:10])
 
             
