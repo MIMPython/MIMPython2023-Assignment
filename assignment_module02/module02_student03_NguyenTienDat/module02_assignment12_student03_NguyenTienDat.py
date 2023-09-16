@@ -25,4 +25,3 @@ for char in bar_chars:
 # 2 biến foo và bar mặc dù trực quan thì 2 biến giống nhau.
 # Lý do vì sao thì không hiểu.
 
-
