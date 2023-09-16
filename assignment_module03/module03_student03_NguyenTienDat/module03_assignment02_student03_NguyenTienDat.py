@@ -12,7 +12,7 @@ def main(input):
         list_input.insert(index, temp)
         index += 1
         
-    # tính tổng của 100 số từ 'list_input'    
+    # tính tổng của 100 số từ 'list_input'.
     sum = 0
     for i in range(len(list_input)):
         sum += list_input[i]
