@@ -27,7 +27,7 @@ class Line:
         """
         Optional: reduce equation to the form ax + y + c = 0 or x + c = 0,
         and convert -0.0 to 0.0
-        Change the object itself.
+        Return a new Line object.
         """
         if self.b != 0:
             self.a, self.b, self.c = self.a / self.b, 1.0, self.c / self.b 
@@ -36,6 +36,7 @@ class Line:
         if self.a == 0: self.a = 0.0
         if self.b == 0: self.b = 0.0
         if self.c == 0: self.c = 0.0
+        return Line(self.a, self.b, self.c)
 
     def __repr__(self):
         string = (f"Equation type ax + by + c = 0\n"
@@ -44,7 +45,7 @@ class Line:
                     f"c: {self.c}")
         return string
 
-    def intersection(self, line):
+    def getIntersection(self, line):
         """
         Return the point of intersection as an instance of Point class.
         If there is no root, or infinite roots, raise error.
@@ -68,27 +69,52 @@ class Line:
         import math
         return abs(self.a * point.x + self.b * point.y + self.c) / math.sqrt(self.a**2 + self.b**2)
 
-    @classmethod
-    def lineThroughTwoPoints(cls, A, B):
+    def lineThroughTwoPoints(point1: Point, point2: Point):
         """
         Return a line object passing through two given points.
         """
-        if A.x == B.x and A.y == B.y:
+        a1, a2 = point1.x, point1.y
+        b1, b2 = point2.x, point2.y
+        if a1 == b1 and a2 == b2:
             raise ValueError("Points must be different.")
         else:
-            object = cls(-B.y + A.y, B.x - A.x, -B.x * (-B.y + A.y) - B.y * (B.x - A.x))
-            object.normalizeLines()
-            return object
+            object = Line(a2 - b2, b1 - a1, b1 * (b2 - a2) - b2 * (b1 - a1))
+            return object.normalizeLines()
+        
+    def getPerpendicularBisector(point1: Point, point2: Point):
+        """
+        Return the perpendicular bisector of a segment connecting two 
+        points as a Line object.
+        """
+        a1, a2 = point1.x, point1.y
+        b1, b2 = point2.x, point2.y
+        midpoint = Point((a1 + b1) / 2, (a2 + b2) / 2)
+        normal_vect = (float(b1 - a1), float(b2 - a2))
+        return Line(
+            normal_vect[0], 
+            normal_vect[1], 
+            -(normal_vect[0] * midpoint.x + normal_vect[1] * midpoint.y)
+            ).normalizeLines(), midpoint
             
-if __name__ == "__main__":
+def main():
+    # Initiate two lines
     line1 = Line(1, 1, -1)
     line2 = Line(1, -1, 0)
 
-    point1 = line1.intersection(line2)
+    # Get intersection
+    point1 = line1.getIntersection(line2)
     print(repr(point1))
-    point2 = Point(0, 0)
 
+    # Get distance
+    point2 = Point(0, 0)
     print(line1.distanceToPoint(point2))
 
+    # Get line through two points
     C = Line.lineThroughTwoPoints(point1, point2)
     print(repr(C))
+
+    # Get perpendicular bisector
+    print(Line.getPerpendicularBisector(point2, Point(3, 4)))
+
+if __name__ == "__main__":
+    main()
