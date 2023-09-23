@@ -12,6 +12,8 @@ class Vector:
         return None
     def length(self): # Độ dài của Vector
         return sqrt(self.x**2 +self.y**2)
+    def getPerpendicular(self): # Vector vuông góc
+        return Vector(-self.y, self.x)
     def vecAdd(self, vectorB): # Phép cộng Vector
         return Vector(self.x+vectorB.x, self.y+vectorB.y)
     def vecMultiply(self, a): # Phép nhân Vector với một vô hướng (số thực)

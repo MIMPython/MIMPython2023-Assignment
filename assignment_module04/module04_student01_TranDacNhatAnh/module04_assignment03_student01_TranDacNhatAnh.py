@@ -35,9 +35,9 @@ def ratio(a, b):
     else:
         return a / b
 class Line:
-    def __init__(self, a, b, x, y): # Định nghĩa đường thẳng bằng Vector chỉ phương và một điểm trong Oxy mà nó đi qua
-        self.v = Vector(a, b)
-        self.p = Point(x, y)
+    def __init__(self, vec: Vector, pt: Point): # Định nghĩa đường thẳng bằng Vector chỉ phương và một điểm trong Oxy mà nó đi qua
+        self.v = vec
+        self.p = pt
     # Việc tìm giao điểm của 2 đường thẳng vẫn luôn gắn liền với giải hệ phương trình (trong chương trình phổ thông, đó là việc giải hệ gồm
     # phương trình của 2 đường thẳng). Để thực hiện việc đó, em cần tạo ra một hàm giải 2 hệ pt tuyến tính.
     # Mỗi điểm trên đường thẳng có dạng Point(x, y) + Vector(a, b)*t, giải hệ sau:
@@ -49,8 +49,14 @@ class Line:
             vec = Point.getVector(self.p, lineB.p) 
             t = Vector.area(vec, lineB.v) / Vector.area(self.v, lineB.v)
             return Point.vectorAdd(self.p, Vector.vecMultiply(self.v, t))
-print(Line.intersection(Line(1, 1, -1, 0), Line(-1, 1, 1, 0))) # Point(0.0, 1.0)
-# Minh họa:      /\ (chân mỗi đoạn thẳng lần lượt là (-1, 0) và (1, 0), còn giao điểm là đầu 2 đoạn thẳng: (0, 1))
+    def getPerpendicular(self, pointA: Point): # Lấy đường thẳng đi qua điểm pointA và vuông góc với đường thẳng đã cho
+        return Line(Vector.getPerpendicular(self.v), pointA)
+    def __repr__(self):
+        return f'Line({self.v}, {self.p})'
+if __name__ == '__main__':
+    print(Line.intersection(Line(Vector(1, 1), Point(-1, 0)), Line(Vector(-1, 1), Point(1, 0)))) # Point(0.0, 1.0)
+    print(Line.getPerpendicular(Line(Vector(1, 1), Point(0, 0)), Point(1, 0))) # Line(Vector(-1, 1), Point(1, 0))
+    # Minh họa:      /\ (chân mỗi đoạn thẳng lần lượt là (-1, 0) và (1, 0), còn giao điểm là đầu 2 đoạn thẳng: (0, 1))
 
 # Tính ra cách giải này hơi bị...ảo :v trước khi viết ra thử em có xây dựng một số hàm với mong muốn làm ngắn gọn hơn các bước tính toán
 # Nhưng ngắn gọn được như bài 3 (và cả bài 4) có hơi vượt ngoài mong đợi
