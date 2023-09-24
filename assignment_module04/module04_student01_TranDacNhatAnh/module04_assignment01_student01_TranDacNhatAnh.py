@@ -1,3 +1,6 @@
+# Bài tập yêu cầu viết chương trình sắp xếp các list đã cho theo thứ tự tổng tăng dần, đồng thời đề xuất các phương án khác 
+# để sắp xếp các list.
+
 # Phương án 1: Sắp xếp theo tổng các phần tử của list. Khi 2 list có tổng bằng nhau, so sánh theo "thứ tự từ điển"
 def arrangeList(manyLists):
     for i in range(len(manyLists)):

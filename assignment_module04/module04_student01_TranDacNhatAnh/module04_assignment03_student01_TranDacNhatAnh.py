@@ -25,15 +25,7 @@
 # Ví lí do đó, em đề xuất xây dựng class Line như sau:
 from module04_assignment02_student01_TranDacNhatAnh import Point
 from module04_assignment02_student01_TranDacNhatAnh import Vector
-from numpy import Infinity
-def ratio(a, b):
-    if b == 0:
-        if a == 0:
-            raise 'Invalid ratio'
-        else:
-            return Infinity
-    else:
-        return a / b
+
 class Line:
     def __init__(self, vec: Vector, pt: Point): # Định nghĩa đường thẳng bằng Vector chỉ phương và một điểm trong Oxy mà nó đi qua
         self.v = vec
@@ -43,7 +35,7 @@ class Line:
     # Mỗi điểm trên đường thẳng có dạng Point(x, y) + Vector(a, b)*t, giải hệ sau:
     #   lineA.p + lineA.v*t1 = lineB.p + lineB.v*t2
     def intersection(self, lineB):
-        if ratio((self.v).x, (self.v).y) == ratio((lineB.v).x, (lineB.v).y): # Hai đường thẳng có cùng "hệ số góc" thì song song với nhau
+        if Vector.ratio(self.v) == Vector.ratio(lineB.v): # Hai đường thẳng có cùng "hệ số góc" thì song song với nhau
             raise('Paralel line, no intersection.')
         else: # Để lấy được giao điểm, ta chỉ cần tìm t1 hoặc t2 trong hệ phương trình trên
             vec = Point.getVector(self.p, lineB.p) 

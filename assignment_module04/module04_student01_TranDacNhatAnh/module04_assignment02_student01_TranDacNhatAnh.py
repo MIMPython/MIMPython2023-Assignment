@@ -2,7 +2,7 @@
 
 # Gọi các thư viện cần thiết cho Class
 from math import sqrt
-
+from numpy import Infinity
 # Note: khi tạo ra class này, ý định của em là dùng nó để xử lí class Line và tính diện tích tam giác ở bài tập sau, 
 # tuy nhiên dùng cho class Point cũng tiện lợi nên em  đặt lên trước luôn :v
 class Vector:
@@ -12,6 +12,14 @@ class Vector:
         return None
     def length(self): # Độ dài của Vector
         return sqrt(self.x**2 +self.y**2)
+    def ratio(self):
+        if self.y == 0:
+            if self.x == 0:
+                raise 'Invalid ratio'
+            else:
+                return Infinity
+        else:
+            return self.x / self.y
     def getPerpendicular(self): # Vector vuông góc
         return Vector(-self.y, self.x)
     def vecAdd(self, vectorB): # Phép cộng Vector
