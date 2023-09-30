@@ -70,5 +70,5 @@ Dùng cặp ngoặc nhọn bên ngoài đường liên kết
 <https://mimpython.github.io/>
 
 ###9. Hình ảnh
-![Alt text](<Oggy (1).webp>)
+![Alt text](<OggyCat.jpg>)
 
