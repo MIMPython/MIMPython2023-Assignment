@@ -1,10 +1,10 @@
-'''
+'''Bài 1: Liệt kê các việc đã làm với repo trên github
 
 Repository: https://github.com/mquangdo/Bai1
-Danh sách công việc đã thực hiện:
--Viết commit
--Tạo nhánh, tạo tag trên repo
--tạo issue, đóng issue
--tạo pull request
--viết README
+List of stuff i did on github:
+-wrote commits
+-created branches, tags on repo
+-created issue, closed issue
+-created pull request
+-wrote README
 '''
