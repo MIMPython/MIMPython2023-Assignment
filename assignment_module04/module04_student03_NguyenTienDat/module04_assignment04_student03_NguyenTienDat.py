@@ -21,4 +21,3 @@ if __name__ == '__main__':
     C = Point(2, 3)
     result = triangle_area.triangle_area(A, B, C)
     print(result) # output: 1.0
-    
