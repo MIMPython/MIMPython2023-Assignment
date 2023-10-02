@@ -1,46 +1,23 @@
-# Bài tập 2
+# Bài tập 4:
 
+from module04_assignment02_student03_NguyenTienDat import Point
+from module04_assignment03_student03_NguyenTienDat import Line
 import math
 
-class Point:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-    
-    
-    def distance(self, other, metric):
-        if metric == 'L1':
-            return abs(self.x - other.x) + abs(self.y - other.y)
-        if metric == 'L2':
-            return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2)
- 
-    # cách 2, ý 4:
-    def symmetry_point_2(self):
-        result = (-self.x, -self.y)
-        return result
-    
-    
-    # cách 3, ý 4:
-    def symmetry_point_3(self):
-        result = self.__class__(self.x, self.y)
-        return result
-    
-    
-    def __repr__(self) -> str:
-        return f'Point({self.x}, {self.y})'
-        
-# cách 1, ý 4:        
-# def symmetry_point_1(point):
-#     return Point(-point.x, -point.y)
-# pointA = Point(3,4)
-# pointB = symmetry_point_1(pointA)
-# print(pointB) # (-3, -4)
+class triangle_area():     
+    def triangle_area(A, B, C):
+        x_A = A.x
+        y_A = A.y
+        X_B = B.x
+        y_B = B.y
+        x_c = C.x
+        y_c = C.y
+        return 0.5*abs((X_B - x_A)*(y_c - y_A) - (x_c - x_A)*(y_B - y_A))
 
 
-if __name__ == '__main__':       
-    pointA = Point(3, 4)
-    pointB = Point(7, 7)
-    disL2 = pointA.distance(pointB, 'L2') # output: 5
-    disL1 = pointA.distance(pointB, 'L1') # output: 7
-    symmetry_point = pointA.symmetry_point_2() # output: (-3, -4)
-        
+if __name__ == '__main__':
+    A = Point(3, 3)
+    B = Point(1, 1)
+    C = Point(2, 3)
+    result = triangle_area.triangle_area(A, B, C)
+    print(result) # output: 1.0
