@@ -10,5 +10,5 @@ Create new label, apply labels to the issue
 Add MIT License (though I'm not sure it was done correctly...)
 Close an issue
 Write a README inserting a GIF
-...
+Have someone make a commit in my repository
 '''
