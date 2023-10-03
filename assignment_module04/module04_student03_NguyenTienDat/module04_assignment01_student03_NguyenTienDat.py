@@ -6,7 +6,7 @@ def sort(input):
     return sorted(input, key=sum)
 
 
-print(sort(A))  # output: B = [[2], [1,2], [3,0,4], [4,5]] 
+# print(sort(A))  # output: B = [[2], [1,2], [3,0,4], [4,5]] 
 
 # Hàm so sánh số lượng phần tử của 2 list bất kì
 C = [[2], [1,2], [3,0,4], [4,5], [5]] # input2
