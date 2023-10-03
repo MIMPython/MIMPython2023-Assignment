@@ -7,4 +7,4 @@ def triangleArea(pointA: Point, pointB: Point, pointC: Point):
     return abs(Vector.area(sideAB, sideAC)/2)
 # test
 if __name__ == '__main__':
-    print(triangleArea(Point(0, 0), Point(0, 1), Point(1, 0))) # 0.5
+    print(triangleArea(Point(1, 3), Point(3, 5), Point(6, 4))) # 0.5
