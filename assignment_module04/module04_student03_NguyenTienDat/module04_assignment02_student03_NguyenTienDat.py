@@ -22,7 +22,7 @@ class Point:
     
     # cách 3, ý 4:
     def symmetry_point_3(self):
-        result = self.__class__(-self.x, -self.y)
+        result = self.__class__(self.x, self.y)
         return result
     
     
