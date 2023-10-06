@@ -21,7 +21,24 @@ def decode(input, morse_code):
     output = []
     for _ in data:
         output.append(morse_code[_])
-    result = " ".join(output)
+    result = "".join(output)
     return result
 
-print(decode(input, morse_code))
+# Generate code from input data which is the word of each character
+def make_code(input):
+    mapping = [('DOT', '.'), ('DASH', '-'), ('SPACE', ' ')]
+    # convert the word to code
+    for key, value in mapping:
+        input = input.replace(key, value)
+        
+    data = list(input)
+    result = []
+    
+    # Remove meaningless characters
+    for _ in data:
+        if _ in [".", "-", " "]:
+            result.append(_)
+    output = "".join(result)
+    return output
+
+print(decode(make_code(decode(input,morse_code)), morse_code)) # output: ILOVEYOU 
