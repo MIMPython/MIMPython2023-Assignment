@@ -1,0 +1,23 @@
+Dưới đây là một ví dụ về cách kiểm tra điều kiện `all` và `any` trên một danh sách Python, không sử dụng thư viện NumPy:
+
+```python
+# Tạo một danh sách Python
+my_list = [1, 2, 3, 4, 5]
+
+# Kiểm tra xem tất cả các phần tử trong danh sách lớn hơn 0 không
+all_greater_than_zero = all(x > 0 for x in my_list)
+print("Tất cả các phần tử lớn hơn 0:", all_greater_than_zero)
+
+# Kiểm tra xem có ít nhất một phần tử trong danh sách lớn hơn 3 không
+any_greater_than_three = any(x > 3 for x in my_list)
+print("Có ít nhất một phần tử lớn hơn 3:", any_greater_than_three)
+```
+
+Kết quả của đoạn mã trên sẽ là:
+
+```
+Tất cả các phần tử lớn hơn 0: True
+Có ít nhất một phần tử lớn hơn 3: True
+```
+
+Trong ví dụ này, chúng ta sử dụng `all` để kiểm tra xem tất cả các phần tử trong danh sách có thỏa mãn điều kiện (lớn hơn 0) không. Chúng ta cũng sử dụng `any` để kiểm tra xem có ít nhất một phần tử trong danh sách thỏa mãn điều kiện (lớn hơn 3) không.

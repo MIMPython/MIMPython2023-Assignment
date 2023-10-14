@@ -1,0 +1,29 @@
+Dưới đây là một ví dụ về cách sử dụng hàm `repeat` trong NumPy để lặp lại các phần tử của mảng:
+
+```python
+import numpy as np
+
+# Tạo một mảng NumPy ban đầu
+original_array = np.array([1, 2, 3, 4, 5])
+
+# Sử dụng hàm repeat để lặp lại các phần tử
+repeated_array = np.repeat(original_array, 3)  # Lặp lại mỗi phần tử 3 lần
+
+print("Mảng gốc:")
+print(original_array)
+
+print("\nMảng sau khi lặp lại:")
+print(repeated_array)
+```
+
+Kết quả của đoạn mã trên sẽ là:
+
+```
+Mảng gốc:
+[1 2 3 4 5]
+
+Mảng sau khi lặp lại:
+[1 1 1 2 2 2 3 3 3 4 4 4 5 5 5]
+```
+
+Trong ví dụ này, mảng `original_array` được tạo ban đầu, và sau đó chúng ta sử dụng hàm `repeat` để lặp lại mỗi phần tử trong mảng 3 lần. Kết quả là một mảng mới chứa các phần tử đã được lặp lại.

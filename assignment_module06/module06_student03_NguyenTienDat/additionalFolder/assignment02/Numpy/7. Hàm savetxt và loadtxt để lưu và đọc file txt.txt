@@ -1,0 +1,38 @@
+Dưới đây là một ví dụ về cách sử dụng hàm `savetxt` để lưu một mảng NumPy vào tệp văn bản và `loadtxt` để đọc dữ liệu từ tệp văn bản và tạo một mảng NumPy từ nó:
+
+```python
+import numpy as np
+
+# Tạo một mảng NumPy
+data = np.array([[1, 2, 3],
+                 [4, 5, 6],
+                 [7, 8, 9]])
+
+# Lưu mảng vào tệp văn bản
+np.savetxt('my_data.txt', data, delimiter=',')
+
+# Đọc dữ liệu từ tệp văn bản và tạo một mảng NumPy
+loaded_data = np.loadtxt('my_data.txt', delimiter=',', dtype=int)
+
+print("Dữ liệu gốc:")
+print(data)
+
+print("\nDữ liệu được đọc từ tệp:")
+print(loaded_data)
+```
+
+Kết quả của đoạn mã trên sẽ là:
+
+```
+Dữ liệu gốc:
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+
+Dữ liệu được đọc từ tệp:
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+```
+
+Trong ví dụ này, chúng ta tạo một mảng NumPy `data` và sau đó sử dụng `savetxt` để lưu mảng này vào tệp văn bản với dấu phẩy làm phân tách. Sau đó, chúng ta sử dụng `loadtxt` để đọc dữ liệu từ tệp và tạo một mảng NumPy `loaded_data` từ nó.

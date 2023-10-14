@@ -1,0 +1,13 @@
+1. Reshaping array (định hình array) (chuyển arr 1 chiều thành nhiều chiều)
+* giả sử có arr:
+	a = [1 2 3 4 5 6 7 8 9]
+* sau khi reshaping thành ma trận 3 hàng 3 cột:
+	bar = a.reshape((3,3))
+=> output (bar): [[1 2 3]
+    	 	   [4 5 6]
+ 	           [7 8 9]]
+2. Transpose (chuyển vị ma trận)
+	foo = bar.T
+=> output (foo): [[1 4 7]
+ 		  [2 5 8]
+ 		  [3 6 9]]
