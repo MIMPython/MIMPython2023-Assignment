@@ -1,3 +1,6 @@
+'''Bài 1: thực hiện các yêu cầu tính tổng các số thuộc một cột hoặc một hàng bằng 2 cách, là tự viết hàm và cách sự dụng numpy'''
+
+
 import random
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
@@ -6,7 +9,7 @@ import time
 from itertools import count
 
 #a)
-def creat_2D_table(m: int, n: int) -> list:
+def creat_2D_table(m: int, n: int) -> list:#tạo list 2 chiều
     # table: list = []
     # for i in range(m):
     #     table.append([])
@@ -21,7 +24,7 @@ def print_2D_table(table: list) -> None:
             print(element, end = ' ')
         print()
 
-def sum_table(table: list) -> int:
+def sum_table(table: list) -> int:#hàm tính tổng list 2 chiều bằng phương thức tự viết
     sum: int = 0
     for row in table:
         for element in row:
@@ -33,7 +36,7 @@ def sum_table(table: list) -> int:
 table = creat_2D_table(1000,1000)
 # print_2D_table(table)
 start_time = time.time()
-print('Phương thức tính tổng tự viết: ',sum_table(table))
+print('Phương thức tính tổng tự viết: ',sum_table(table))#dùng hàm tự viết
 end_time = time.time()
 run_time = end_time - start_time
 print('Thời gian chạy: ',run_time,'\n')
@@ -43,7 +46,7 @@ print('Thời gian chạy: ',run_time,'\n')
 table_2 = np.array(table)
 # print(table_2)
 start_time = time.time()
-print('Phương thức tính tổng có sẵn của numpy: ',np.sum(table_2))
+print('Phương thức tính tổng có sẵn của numpy: ',np.sum(table_2))#dùng thư viện
 end_time = time.time()
 run_time = end_time - start_time
 print('Thời gian chạy: ',run_time,'\n')
@@ -59,7 +62,7 @@ def sum_of_col(table: list, j: int) -> int:
                 sum: int = sum + row[i]
     return sum
 
-def list_sum_of_col(table: list) -> list:
+def list_sum_of_col(table: list) -> list:#hàm tính tổng giá trị của từng cột
     result: list = []
     for i in range(len(table[0])):
         result.append(sum_of_col(table, i))
@@ -141,7 +144,7 @@ def draw(i):
 
     y2.append(end_time1 - start_time1)
     plt.plot(x, y2, marker = 'o', linestyle = '-', label = 'Numpy module')
-    plt.legend(loc='upper left')
+    plt.legend(loc = 'upper left')
 
 
 ani = FuncAnimation(plt.gcf(), draw, interval = 100)
