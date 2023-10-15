@@ -1,0 +1,12 @@
+1. / np.random.random(size=None) / Tạo một mảng random
+  => Nếu muốn dùng mẫu random có sẵn ta nhập:
+  / np.random.seed(0)
+    np.random.random((2,2)) / 
+	output: [[0.5488135  0.71518937]
+ 		 [0.60276338 0.54488318]]
+2. / np.random.normal(mean, scale, size) /
+3. / np.random.randint(low, high, size) / Tạo một mảng random số nguyên
+4. / np.random.rand(d1,d2) /
+	ví dụ: np.random.rand(4,4) 
+	output: [[0.4488135  0.61518937]
+ 		 [0.70276338 0.84488318]]

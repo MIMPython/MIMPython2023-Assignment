@@ -1,0 +1,13 @@
+import numpy as np
+
+~ Thư viện này được viết dựa trên ngôn ngữ C (vậy nên sẽ rất quen thuộc bởi một số đối tượng đã được làm quen như Array, List hay một số vòng lặp quen thuộc for...)~
+
+* Tạo Array từ Python Lists:
+1. Tạo array: np.array([1,2,3,4]) hoặc
+	      np.array([1,2,3,4], dtype='float32')
+2. Kiểu dữ liệu: type(_tên biến_)
+3. Trả về số cột số dòng của mảng (ma trận): a.shape
+4. Số chiều của mảng: a.ndim
+5. Kiểm tra kiểu dữ liệu của phần tử của mảng: a.dtype
+6. Kiểm tra số phần tử của mảng: a.size
+

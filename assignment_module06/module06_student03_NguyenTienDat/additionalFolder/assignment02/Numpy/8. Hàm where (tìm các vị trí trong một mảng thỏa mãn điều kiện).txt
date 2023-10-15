@@ -1,0 +1,29 @@
+Dưới đây là một ví dụ về cách sử dụng hàm `where` trong NumPy để tìm các vị trí trong một mảng NumPy thỏa mãn một điều kiện:
+
+```python
+import numpy as np
+
+# Tạo một mảng NumPy
+arr = np.array([1, 2, 3, 4, 5])
+
+# Sử dụng hàm where để tìm các vị trí của các phần tử lớn hơn 3
+indices = np.where(arr > 3)
+
+print("Mảng gốc:")
+print(arr)
+
+print("\nCác vị trí của các phần tử lớn hơn 3:")
+print(indices)
+```
+
+Kết quả của đoạn mã trên sẽ là:
+
+```
+Mảng gốc:
+[1 2 3 4 5]
+
+Các vị trí của các phần tử lớn hơn 3:
+(array([3, 4]),)
+```
+
+Trong ví dụ này, chúng ta sử dụng `np.where` để tìm các vị trí của các phần tử trong mảng `arr` mà thỏa mãn điều kiện `arr > 3`. Kết quả là một tuple chứa các mảng vị trí của các phần tử thỏa mãn điều kiện. Trong trường hợp này, các vị trí của các phần tử lớn hơn 3 là 3 và 4.

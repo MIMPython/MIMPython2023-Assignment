@@ -1,0 +1,18 @@
+Dưới đây là một ví dụ về cách sử dụng hàm `all` và `any` trong NumPy để kiểm tra điều kiện trên mảng:
+
+```python
+import numpy as np
+
+# Tạo một mảng NumPy
+arr = np.array([1, 2, 3, 4, 5])
+
+# Kiểm tra xem tất cả các phần tử trong mảng lớn hơn 0 không
+all_greater_than_zero = np.all(arr > 0)
+print("Tất cả các phần tử lớn hơn 0:", all_greater_than_zero)
+
+# Kiểm tra xem có ít nhất một phần tử trong mảng lớn hơn 3 không
+any_greater_than_three = np.any(arr > 3)
+print("Có ít nhất một phần tử lớn hơn 3:", any_greater_than_three)
+```
+
+
