@@ -131,8 +131,10 @@ def draw(i):
     sum_table(table)
     end_time = time.time()
 
+    numpy_table = np.array(table)#ép lại table kiểu list vừa tạo thành kiểu mảng xong dùng thư viện cho mảng numpy
+
     start_time1 = time.time()
-    np.sum(np.array(table))
+    np.sum(numpy_table)
     end_time1 = time.time()
 
     plt.cla()
