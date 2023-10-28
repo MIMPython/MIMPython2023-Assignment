@@ -5,7 +5,10 @@ class Fraction:
         self.d = denominator
 
     def result(self) -> float:
-        return self.n / self.d
+        try:
+            return self.n / self.d
+        except ZeroDivisionError:
+            print("Denominator cannot be zero")
 
     def __repr__(self):
         return f'Fractione({self.n}, {self.d})'
@@ -36,8 +39,9 @@ def sum_fractions(fractions):
     return total
 
 fractionA = Fraction(1, 4)
-fractionB = Fraction(0, 2)
+fractionB = Fraction(1, 0)
 fractionC = Fraction(3, 4)
 
 totalValue = sum_fractions([fractionA, fractionB, fractionC])
-print(totalValue)  # Kết quả là Fraction(1, 1)
+# print(totalValue)  # Kết quả là Fraction(1, 1)
+print(fractionB.result())
