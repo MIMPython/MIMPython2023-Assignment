@@ -1,4 +1,13 @@
 def run():
+    """
+    Example:
+    
+    Input: [1, 2, 3]
+    Output: 2.0
+    
+    Input: [1]
+    Output: 1.0
+    """
     try:
         arrayString = input("Input a list: ")
         arrayString = arrayString[1:-1]
