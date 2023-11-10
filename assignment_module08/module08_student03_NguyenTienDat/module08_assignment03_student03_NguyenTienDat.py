@@ -11,14 +11,16 @@ def Longest_Collatz_Sequence(n):
             count += 1
     return count
     
-def find_max():
-    max_temp = 0
-    for i in range(1, 10**6 + 1):
-        if Longest_Collatz_Sequence(i) > max_temp:
-            max_temp = Longest_Collatz_Sequence(i)
-            
-    for i in range(1, 10**6 + 1):
-        if Longest_Collatz_Sequence(i) == max_temp:
-            return i # 837799
+def find_max(upper_limit):
+    max_length = 0
+    number_with_max_length = 0
+    
+    for i in range(1, upper_limit + 1):
+        current_length = Longest_Collatz_Sequence(i)
+        if current_length > max_length:
+            max_length = current_length
+            number_with_max_length = i
 
-print(find_max())
+    return number_with_max_length # output: 837799
+
+print(find_max(10**6))
