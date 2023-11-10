@@ -144,6 +144,7 @@ def result_visualization(time_caculate_linear_equation_non_numpy, time_caculate_
     ax1.set_title('Compare between numpy and normal')
     ax1.set_xlabel('Index')
     ax1.set_ylabel('Value')
+    ax1.legend()
     
 
     # Second subplot
@@ -152,7 +153,7 @@ def result_visualization(time_caculate_linear_equation_non_numpy, time_caculate_
     ax2.set_xlabel('Index')
     ax2.set_ylabel('Value')
 
-    plt.legend()
+    
     # Adjust the layout
     plt.tight_layout()
 
