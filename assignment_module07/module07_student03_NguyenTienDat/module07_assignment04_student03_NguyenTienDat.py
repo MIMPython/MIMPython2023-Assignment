@@ -11,7 +11,7 @@ class Fraction:
             print("Denominator cannot be zero")
 
     def __repr__(self):
-        return f'Fractione({self.n}, {self.d})'
+        return f'{__name__}({self.n}, {self.d})'
 
     def __add__(self, other):
         if isinstance(other, Fraction):
@@ -39,7 +39,7 @@ def sum_fractions(fractions):
     return total
 
 fractionA = Fraction(1, 4)
-fractionB = Fraction(1, 0)
+fractionB = Fraction(0, 1)
 fractionC = Fraction(3, 4)
 
 totalValue = sum_fractions([fractionA, fractionB, fractionC])
