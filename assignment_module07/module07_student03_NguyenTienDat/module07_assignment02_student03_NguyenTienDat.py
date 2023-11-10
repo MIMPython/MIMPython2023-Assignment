@@ -33,12 +33,12 @@ class Elipse:
         self.width = width
     
     # Ramanujan's formula
-    def caculate_perimeter(self):
+    def caculate_area(self):
         a = self.hight/2
         b = self.width/2
         return math.pi*(3*(a+b)-math.sqrt((3*a+b)*(a+3*b)))
     
-    def caculate_area(self):
+    def caculate_perimeter(self):
         a = self.hight/2
         b = self.width/2
         return math.pi*a*b
@@ -47,10 +47,10 @@ class Circle:
     def __init__(self, radius):
         self.radius = radius
     
-    def caculate_perimeter(self):
+    def caculate_area(self):
         return 2*math.pi*self.radius    
     
-    def caculate_area(self):
+    def caculate_perimeter(self):
         return math.pi*math.pow(self.radius,2)
 # obj_4 = Elipse(3, 5)
 # print(Elipse.caculate_area(obj_4))

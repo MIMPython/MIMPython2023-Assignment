@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from additionalFolder.Geometry import Vector, Point
+from .additionalFolder.Geometry import Vector, Point
 
 # Tạo một bảng (hình vuông) với các ô chứa các giá trị là 0 hoặc 1 (tương ứng với màu trắng hoặc đen)
 def generateBoard(size: int, colour: list[int]) -> np.ndarray:
