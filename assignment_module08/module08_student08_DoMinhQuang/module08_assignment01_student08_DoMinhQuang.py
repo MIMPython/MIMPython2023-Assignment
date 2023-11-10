@@ -121,7 +121,7 @@ index: list = []
 y = []
 
 fig, ax = plt.subplots()
-ax.set_xlim(0, 100)
+ax.set_xlim(0, 200)
 ax.set_ylim(0, 0.00000005)
 line, = ax.plot(0, 0)
 
@@ -156,7 +156,7 @@ animate = FuncAnimation(plt.gcf(), update, interval = 100)
 
 plt.title('Error between using self-defined function and numpy function')
 plt.xlabel('Time')
-plt.ylabel('Error')
+plt.ylabel('Error value')
 plt.grid('True')
 plt.show()
 
