@@ -9,8 +9,8 @@ def product(x, y):
         y (int): second integer number
 
     Returns:
-        product: x + y
+        product: x * y
     """
-    product = x + y
+    product = x * y
     return product
     
