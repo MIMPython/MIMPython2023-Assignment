@@ -1,4 +1,4 @@
-# Bài tập 3:
+# Bài tập 6:
 
 def Longest_Collatz_Sequence(n):
     count = 1
