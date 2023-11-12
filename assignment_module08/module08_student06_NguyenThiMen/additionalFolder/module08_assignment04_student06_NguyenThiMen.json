@@ -1,0 +1,22 @@
+[
+  {
+    "class":"K65",
+    "nStudents":10,
+    "meanScore":3.9
+  },
+  {
+    "class":"K66",
+    "nStudents":10,
+    "meanScore":5.0
+  },
+  {
+    "class":"K67",
+    "nStudents":7,
+    "meanScore":5.4285714286
+  },
+  {
+    "class":"K68",
+    "nStudents":10,
+    "meanScore":5.1
+  }
+]
