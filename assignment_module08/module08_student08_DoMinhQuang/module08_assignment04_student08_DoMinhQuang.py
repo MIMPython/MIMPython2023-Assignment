@@ -40,15 +40,14 @@ def data_classify(data, cls: str):
         new_df = pd.DataFrame({'class': [cls], 'nStudents': [num_of_students], 'meanScores': [mean_score]})
         return new_df
 
-
-df_K64 = data_classify(data, 'K64')
-df_K65 = data_classify(data, 'K65')
-df_K66 = data_classify(data, 'K66')
-df_K67 = data_classify(data, 'K67')
-total_df = pd.concat([df_K64, df_K65, df_K66, df_K67])
-
+total_df = pd.concat([data_classify(data, cls) for cls in cls_list])
 print(data)
 print(total_df)
+
+
+
+
+
 
 
 
